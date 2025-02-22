@@ -1,0 +1,172 @@
+* {
+    
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.boca {
+    align-items: center;
+    color: white;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    
+}
+
+.bocapasion {
+    text-decoration: overline;
+    
+}
+.logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
+
+
+
+body{
+  min-height: 69vh;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #051394;
+  
+}
+
+
+
+
+/* comienzo navegador  */
+.header{
+  
+  top: 0;
+  left: 0;
+
+  padding: 5px 25px;
+  background: rgba(255, 255, 255, .1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  /*border-bottom: 2px solid rgba(255, 255, 255, .2);*/
+  border-bottom: 2px solid yellow;
+  
+}
+.header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
+  transition: 0.5s;
+
+}
+.header:hover::before{
+  left: 100%;
+}
+.logo{
+  margin-top: 50px;
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  text-decoration: overline;
+  align-items: center;
+}
+
+.logo:hover {
+  color: yellow;
+}
+.navbar a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: .3s;
+  
+}
+.navbar a:hover{
+  color: yellow;
+
+}
+
+/* fin de navegador  */
+
+
+
+
+
+/* comienzo seccion noticias  */
+/* comienzo seccion imagenes  */
+.container {
+  padding: 20px 200px;
+  background-color: #051394;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, minmax(100px, 1fr)); /* Filas flexibles con altura mínima */
+  column-gap: 60px;
+  row-gap: 20px; /* Espacio entre filas reducido */
+  margin-top: 4rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.container div {
+  background: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden; /* Evita que el texto se salga del div si es más grande */
+}
+
+.container div:first-child {
+  background-color: lightgreen;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.container div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* o contain */
+}
+/* fin seccion imagenes  */
+/* comienzo subtitulos de imagenes  */
+
+.container div h3 { /* Estilos para el subtítulo */
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  bottom: 0; /* Ajusta la posición vertical (top, bottom, etc.) */
+  left: 0; /* Ajusta la posición horizontal (left, right, etc.) */
+  width: 100%;
+  background-color: #051394; /* Fondo semitransparente para el texto */
+  color: yellow;
+  font-size: 15px; /* Ajusta el tamaño de la fuente */
+  padding: 10px; /* Ajusta el padding */
+  /* Otros estilos que desees */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+  opacity: 80%;
+}
+
+.container div h3 .subtitulo1 {
+  font-size: 20px;
+}
+
+
+/* fin de subtitulos de imagenes  */
+                                            /* fin seccion noticias  */
+
+
+
+
