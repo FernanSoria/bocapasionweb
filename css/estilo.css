@@ -45,10 +45,8 @@ body{
 
 /* comienzo navegador  */
 .header{
-  
   top: 0;
   left: 0;
-
   padding: 5px 25px;
   background: rgba(255, 255, 255, .1);
   display: flex;
@@ -57,7 +55,7 @@ body{
   backdrop-filter: blur(10px);
   /*border-bottom: 2px solid rgba(255, 255, 255, .2);*/
   border-bottom: 2px solid yellow;
-  
+
 }
 .header::before{
   content: '';
@@ -319,15 +317,15 @@ Fin titulo calendario
 Comienzo segunda seccion de noticias*/
 
 .seccion-dos {
-  padding: 20px 300px;
+  padding: 20px 300px ;
   background-color: #051394;
   border: 2px solid yellow;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, minmax(100px, 1fr)); /* Filas flexibles con altura mínima */
+  grid-template-rows: repeat(3, minmax(100px, 1fr)); /* Filas flexibles con altura mínima */
   column-gap: 40px;
-  row-gap: 5px; /* Espacio entre filas reducido */
+  row-gap: 10px; /* Espacio entre filas reducido */
   margin-top: 4rem;
   align-content: center;
   justify-content: center;
@@ -385,23 +383,217 @@ Comienzo segunda seccion de noticias*/
   background-color: #051394; /* Fondo semitransparente para el texto */
   color: yellow;
   font-size: 15px; /* Ajusta el tamaño de la fuente */
-  
-  /* Otros estilos que desees */
   z-index: 1; /* Asegura que el texto esté por encima de la imagen */
   opacity: 80%; 
 
- 
 
-  
-  
- 
 }
 
 .seccion-dos div h3 .subtitulo7 {
   font-size: 20px;
+
+}
+/* Fin de la segunda seccion
+-----------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+Comienzo seccion de videos*/
+
+
+.titulo-video h3 { /* Estilos para el subtítulo */
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  bottom: 0; /* Ajusta la posición vertical (top, bottom, etc.) */
+  left: 0; /* Ajusta la posición horizontal (left, right, etc.) */
+  width: 100%;
+  background-color: #051394; /* Fondo semitransparente para el texto */
+  color: yellow;
+  font-size: 15px; /* Ajusta el tamaño de la fuente */
+  padding: 10px; /* Ajusta el padding */
+  /* Otros estilos que desees */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+  opacity: 80%;
   
 }
 
+.contenedor-videos {
+  padding: 20px 300px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas para el diseño */
+  grid-template-rows: repeat(4, 1fr); /* 3 filas para el diseño */
+  gap: 10px; /* Espacio entre videos */
+  padding: 20px 200px;
+  background-color: #051394;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  row-gap: 50px;
+  align-content: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+
+.subvideo1 {
+  position: relative; /* Posiciona el subtítulo dentro del contenedor */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(5, 19, 148, 0.7); /* Fondo azul oscuro semitransparente */
+  color: yellow;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  opacity: 100%; /* Opacidad completa para el texto */
+  font-size: 15px;
+  text-align: start;
+  
+}
+
+
+
+
+.contenedor-videos video {
+  width: 100%; /* Ocupa todo el ancho de su contenedor */
+  height: 100%; /* Ocupa todo el alto de su contenedor */
+  object-fit: cover; /* Ajusta el video al contenedor sin deformarlo */
+}
+
+.video-principal {
+  grid-column: 1 / 4; /* Ocupa 3 columnas */
+  grid-row: 1 / 3; /* Ocupa 2 filas */
+}
+
+.video2 {
+  grid-column: 4 / 6; /* Ocupa 1 columna */
+  grid-row: 1 / 2; /* Ocupa 1 fila */
+}
+
+.video3 {
+  grid-column: 4 / 6; /* Ocupa 1 columna */
+  grid-row: 2 / 3; /* Ocupa 1 fila */
+}
+
+.video4 {
+  grid-column: 1 / 2; /* Ocupa 1 columna */
+  grid-row: 3 / 4; /* Ocupa 1 fila */
+}
+
+.video5 {
+  grid-column: 2 / 3; /* Ocupa 1 columna */
+  grid-row: 3 / 4; /* Ocupa 1 fila */
+}
+.video6 {
+  grid-column: 3 / 4; /* Ocupa 1 columna */
+  grid-row: 3 / 4; /* Ocupa 1 fila */
+}
+.video7 {
+    grid-column: 4 / 6; /* Ocupa 1 columna */
+    grid-row: 3 / 4; /* Ocupa 1 fila */
+}
+
+@media (max-width: 768px) {
+  .contenedor-videos {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas pequeñas */
+    grid-template-rows: auto; /* Ajuste automático de filas */
+    padding: 10px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  .video-principal {
+    grid-column: 1 / 4; /* Ocupa 3 columnas */
+    grid-row: 1 / 2; /* Ocupa 1 fila */
+  }
+
+  .video2, .video3 {
+    grid-column: 1 / 4; /* Ocupa 3 columnas */
+    grid-row: auto; /* Ajuste automático de filas */
+  }
+    .video4, .video5, .video6, .video7 {
+    grid-column: 1 / 4; /* Ocupa 3 columnas */
+    grid-row: auto; /* Ajuste automático de filas */
+    
+  }
+}
+
+/*fin de seccion de videos
+--------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+
+Comienzo del footer*/
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: yellow;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: #051394;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem {
+  list-style: none;
+}
+.menu-icon {
+  color: #051394;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: #051394;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
 
   
